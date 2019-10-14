@@ -10,6 +10,10 @@
 
 #define DEBUG 0
 
+// Return Status
+#define SUCCESS  0
+#define ERROR   -1
+
 /* http://dominion.diehrstraits.com has card texts */
 /* http://dominion.isotropic.org has other stuff */
 
