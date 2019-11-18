@@ -890,7 +890,7 @@ int processBaronCard(int discardEstate, int handPos, struct gameState *state)
  * \param   - struct gameState state - game information
  * \return  - 0 on success and -1 on error
  */
-int processMinionCard(int chooseCards, int chooseCoins, int handPos, struct gameState *state)
+int processMinionCard(int chooseCoins, int chooseCards, int handPos, struct gameState *state)
 {
     int player = whoseTurn(state);
     state->numActions++;
@@ -993,7 +993,9 @@ int processTributeCard(int handPos, struct gameState *state)
     int card2 = -1;
 
     if (npDeck >= 2){   // If the deck has two cards that can be pulled
+        drawCard(nextPlayer, state);
         card1 = returnLastDrawnCardType(nextPlayer, state);
+        drawCard(nextPlayer, state);
         card2 = returnLastDrawnCardType(nextPlayer, state);
     }
     else if ((npDeck + npDiscard) >= 2){

@@ -132,4 +132,10 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 /* Set array position of each player who won (remember ties!) to
    1, others to 0 */
 
+int processBaronCard(int discardEstate, int handPos, struct gameState *state);
+int processMinionCard(int chooseCards, int chooseCoins, int handPos, struct gameState *state);
+int processTributeCard(int handPos, struct gameState *state);
+
+int getNextPlayer(int currentPlayer, int numPlayers);
+
 #endif
