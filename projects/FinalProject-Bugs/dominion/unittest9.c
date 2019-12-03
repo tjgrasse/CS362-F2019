@@ -146,7 +146,7 @@ int main(void)
     actionsBefore = game.numActions;
     cardEffect(tribute, 1, 0, 0, &game, 0, &coinBonus);
     actionsAfter = game.numActions;
-    testResults(actionsBefore, actionsAfter, 2, 2);
+    testResults(actionsBefore, actionsAfter, 2, 3);
     printf("\n");
 
     // save number of actions before the tribute card is used, call functions, get actions after
@@ -156,7 +156,7 @@ int main(void)
     actionsBefore = game.numActions;
     cardEffect(tribute, 1, 0, 0, &game, 0, &coinBonus);
     actionsAfter = game.numActions;
-    testResults(actionsBefore, actionsAfter, 2, 2);
+    testResults(actionsBefore, actionsAfter, 2, 3);
     printf("\n");
     
     printf("\n");
