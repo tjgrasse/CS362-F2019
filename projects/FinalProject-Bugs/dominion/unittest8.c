@@ -52,14 +52,14 @@ void testSetup(struct gameState *game)
 }
 
 void testResults(int before, int after, int plus) {
-    printf("     Coins before: %d", before);
-    printf("     Coins after: %d", after);
+    printf("     Coins before: %d\n", before);
+    printf("     Coins after: %d\n", after);
 
     if (before + plus == after) {
-        printf("     PASSED");
+        printf("PASSED\n");
     }
     else {
-        printf("     FAILED");
+        printf("FAILED\n");
     }   
 }
 
@@ -76,6 +76,7 @@ int main(void)
     displayTestInfo();
 
     // save number of coins before the baron card is used, call functions, get coins after
+    printf("Baron played. Expect +4 number of Coins.\n");
     coinsBefore = game.coins;
     cardEffect(baron, 1, 0, 0, &game, 0, &coinBonus);
     updateCoins(0, &game, coinBonus);
@@ -84,6 +85,7 @@ int main(void)
     printf("\n");
 
     // save number of coins before the tribute card is used, call functions, get coins after
+    printf("Tribute played. Expect +2 number of Coins.\n");
     testSetup(&game);
     coinsBefore = game.coins;
     coinBonus = 0;
@@ -94,6 +96,7 @@ int main(void)
     printf("\n");
 
     // save number of coins before the minion card is used, call functions, get coins after
+    printf("Minion played. Expect +2 number of Coins.\n");
     testSetup(&game);
     coinsBefore = game.coins;
     coinBonus = 0;
@@ -104,6 +107,7 @@ int main(void)
     printf("\n");
 
     // save number of coins before the embargo card is used, call functions, get coins after
+    printf("Embargo played. Expect +2 number of Coins.\n");
     testSetup(&game);
     coinsBefore = game.coins;
     coinBonus = 0;
